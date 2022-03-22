@@ -11,8 +11,8 @@ var o6
 var puntuacion=0
 var grupoCaptus
 var grupoNubes
-var play
-var end
+var play // hay que inicializar ponerle =1; 
+var end // ponerle = 0; 
 var gameState=play;
 
 
@@ -86,6 +86,10 @@ function draw() {
   
   else if (gameState===end){
 ground.velocityX=0;
+    
+      trex.velocityY=0; // agrega esta linea para que se detenga el trex
+    grupoNubes.setVelocityXEach(0); // agrega esta linea para que se detengan las nubes
+     grupoCaptus.setVelocityXEach(0);  // agrega esta linea para que se detengan los cactus
   }
   
   
